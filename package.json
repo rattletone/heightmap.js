@@ -1,0 +1,19 @@
+{
+  "name": "heightmap.js",
+  "version": "0.0.0",
+  "author": "Samuel Taylor <rattletone@protonmail.com>",
+  "license": "MIT",
+  "description": "",
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rattletone/heightmap.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rattletone/heightmap.js/issues"
+  },
+  "homepage": "https://github.com/rattletone/heightmap.js#readme",
+  "main": "dist/heightmap.js",
+  "engines": {},
+  "scripts": {}
+}
