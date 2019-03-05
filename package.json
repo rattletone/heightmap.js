@@ -15,5 +15,8 @@
   "homepage": "https://github.com/rattletone/heightmap.js#readme",
   "main": "dist/heightmap.js",
   "engines": {},
-  "scripts": {}
+  "scripts": {},
+  "devDependencies": {
+    "rollup": "^1.4.1"
+  }
 }
