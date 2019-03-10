@@ -16,7 +16,8 @@
   "main": "dist/heightmap.js",
   "engines": {},
   "scripts": {
-    "bundle": "rollup -c"
+    "build": "rollup -c",
+    "lint": "eslint src"
   },
   "devDependencies": {
     "eslint": "^5.15.1",
