@@ -8,9 +8,8 @@ function noise(strength) {
 
 function create(iterations) {
 	const ubound = Math.pow(2, iterations);
-	const length = ubound + 1;
 	const heightmap = [];
-	let i = length;
+	let i = ubound + 1;
 
 	while(i--) {
 		heightmap[i] = [];
@@ -21,12 +20,10 @@ function create(iterations) {
 	heightmap[ubound][0] = Math.random();
 	heightmap[ubound][ubound] = Math.random();
 
-	let step = 0;
+	let div = ubound;
 	let noiseStrength = 1;
 
-	while(ubound / Math.pow(2, step) > 1) {
-		const div =  ubound / Math.pow(2, step);
-
+	while(div > 1) {
 		for(let y = 0; y < ubound; y += div) {
 			for(let x = 0; x < ubound; x += div) {
 				const a = heightmap[y][x];
@@ -80,8 +77,8 @@ function create(iterations) {
 			}
 		}
 
+		div /= 2;
 		noiseStrength /= 2;
-		step++;
 	}
 
 	return heightmap;
