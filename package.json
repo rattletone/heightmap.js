@@ -19,6 +19,7 @@
     "bundle": "rollup -c"
   },
   "devDependencies": {
+    "eslint": "^5.15.1",
     "rollup": "^1.4.1"
   }
 }
