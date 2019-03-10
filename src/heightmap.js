@@ -3,7 +3,7 @@ function clamp(n) {
 }
 
 function noise(strength) {
-	return (Math.random() * (1 - -1) + -1) * strength;
+	return ((Math.random() * (1 - -1)) + -1) * strength;
 }
 
 function create(iterations) {
@@ -31,7 +31,7 @@ function create(iterations) {
 				const c = heightmap[y + div][x];
 				const d = heightmap[y + div][x + div];
 
-				heightmap[y + div / 2][x + div / 2] = clamp((a + b + c + d) / 4 + noise(noiseStrength));
+				heightmap[y + (div / 2)][x + (div / 2)] = clamp(((a + b + c + d) / 4) + noise(noiseStrength));
 			}
 		}
 
@@ -41,11 +41,11 @@ function create(iterations) {
 				const b = heightmap[y][x + div];
 				const c = heightmap[y + div][x];
 				const d = heightmap[y + div][x + div];
-				const e = heightmap[y + div / 2][x + div / 2];
+				const e = heightmap[y + (div / 2)][x + (div / 2)];
 
-				heightmap[y][x + div / 2] = clamp(
+				heightmap[y][x + (div / 2)] = clamp(
 					(y
-						? (heightmap[y - div / 2][x + div / 2] + a + b + e) / 4
+						? (heightmap[y - (div / 2)][x + (div / 2)] + a + b + e) / 4
 						: (a + b + e) / 3
 					)
 					+ noise(noiseStrength)
@@ -53,27 +53,27 @@ function create(iterations) {
 
 				heightmap[y + (div / 2)][x] = clamp(
 					(x
-						? (heightmap[y + div / 2][x - div / 2] + a + e + c) / 4
+						? (heightmap[y + (div / 2)][x - (div / 2)] + a + e + c) / 4
 						: (a + e + c) / 3
 					)
 					+ noise(noiseStrength)
 				);
 
-				heightmap[y + div / 2][x + div] = clamp(
+				heightmap[y + (div / 2)][x + div] = clamp(
 					(x + div < ubound
-						? (heightmap[y + div / 2][x + div + div / 2] + b + e + d) / 4
+						? (heightmap[y + (div / 2)][x + div + (div / 2)] + b + e + d) / 4
 						: (b + e + d) / 3
 					)
 					+ noise(noiseStrength)
 				);
 
-				heightmap[y + div][x + div / 2] = clamp(
+				heightmap[y + div][x + (div / 2)] = clamp(
 					(y + div < ubound
-						? (heightmap[y + div + div / 2][x + div / 2] + e + c + d) / 4
+						? (heightmap[y + div + (div / 2)][x + (div / 2)] + e + c + d) / 4
 						: (e + c + d) / 3
 					)
 					+ noise(noiseStrength)
-				);	
+				);
 			}
 		}
 
