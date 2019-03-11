@@ -23,6 +23,6 @@
   "devDependencies": {
     "eslint": "^5.15.1",
     "jest": "^24.4.0",
-    "rollup": "^1.4.1"
+    "rollup": "^1.6.0"
   }
 }
