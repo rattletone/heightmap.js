@@ -46,8 +46,8 @@ function* random(aSeed, bSeed, cSeed, dSeed) {
 
 class Heightmap {
 	static create(iterations, seed) {
-		if(isNaN(Number(iterations))) {
-			throw new TypeError("\"iterations\" must be of type, or able to be converted to type, \"number\"");
+		if(typeof iterations !== "number") {
+			throw new TypeError("\"iterations\" must be of type \"number\"");
 		}
 
 		const hashSeed = typeof seed === "string" ? seed : Math.random().toString(36);

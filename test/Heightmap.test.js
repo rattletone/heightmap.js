@@ -7,8 +7,8 @@ test("generate heightmap with size of 2 ** iterations + 1", () => {
 	expect(heightmap.length).toBe(Math.pow(2, iterations) + 1);
 });
 
-test("throw TypeError if iterations arguments parameter is invalid", () => {
-	const iterations = NaN;
+test("throw TypeError if iterations argument is not of type number", () => {
+	const iterations = null;
 
 	expect(() => Heightmap.create(iterations)).toThrow(TypeError);
 });
