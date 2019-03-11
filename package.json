@@ -13,7 +13,7 @@
     "url": "https://github.com/rattletone/heightmap.js/issues"
   },
   "homepage": "https://github.com/rattletone/heightmap.js#readme",
-  "main": "dist/heightmap.js",
+  "main": "dist/Heightmap.js",
   "engines": {},
   "scripts": {
     "build": "rollup -c",

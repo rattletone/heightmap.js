@@ -1,8 +1,8 @@
 module.exports = {
-    input: "src/heightmap.js",
+    input: "src/Heightmap.js",
     output: {
-        file: "dist/heightmap.js",
+        file: "dist/Heightmap.js",
         format: "umd",
-        name: "heightmap"
+        name: "Heightmap"
     }
 };
