@@ -45,6 +45,10 @@ function* random(aSeed, bSeed, cSeed, dSeed) {
 }
 
 function create(iterations, seed) {
+	if(isNaN(Number(iterations))) {
+		throw new TypeError("\"iterations\" must be of type, or able to be converted to type, \"number\"");
+	}
+
 	const hashSeed = typeof seed === "string" ? seed : Math.random().toString(36);
 	const randomSeed = hash(hashSeed);
 	const randomNumber = random(randomSeed.next().value, randomSeed.next().value, randomSeed.next().value, randomSeed.next().value);
