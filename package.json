@@ -3,8 +3,12 @@
   "version": "0.0.0",
   "author": "Samuel Taylor <rattletone@protonmail.com>",
   "license": "MIT",
-  "description": "",
-  "keywords": [],
+  "description": "Library for procedurally generating heightmaps",
+  "keywords": [
+    "heightmap",
+    "procedural",
+    "generation"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rattletone/heightmap.js.git"
@@ -14,7 +18,9 @@
   },
   "homepage": "https://github.com/rattletone/heightmap.js#readme",
   "main": "dist/Heightmap.js",
-  "engines": {},
+  "engines": {
+    "node": ">=6.0.0"
+  },
   "scripts": {
     "build": "rollup -c",
     "lint": "eslint src",
